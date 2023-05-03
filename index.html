@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div style="text-align: center">
+        <h1>Type anything</h1>
+        <textarea cols="40" rows="10" onkeydown="remove()" onkeyup="change()" id="textarea"></textarea>
+    </div>
+</body>
+<script>
+    index = 0;
+    text = '';
+    function change() {
+        defaultText = 'Cách mẫu là chạy liên tục hàm chage để đo độ dài text nhập vào rồi set text :D ảo thật đấy !!!!';
+        text += defaultText[index];
+        index++;
+        document.getElementById('textarea').value = text;
+        if (defaultText[index] == undefined) {
+            index = 0;
+            text = '';
+        }
+    }
+</script>
+
+</html>
